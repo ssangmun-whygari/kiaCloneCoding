@@ -3,15 +3,15 @@ import styles from './CategoryTab.module.css'
 import CategoryTabItem from './CategoryTabItem.js'
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 
-export default function CategoryTab({categories, setUpperCategoryNo, setCategoryNo}) {
+export default function CategoryTab({categories, setCategoryNo}) {
   // console.log(categories)
   const [activeItemId, setActiveItemId] = useState(-1); // categories 배열에서 선택된 인덱스(0부터 시작)
   console.log("CategoryTab : ")
   console.log(categories)
 
-  // setUpperCategoryNo, setCategoryNo
+  // setCategoryNo
   if (activeItemId !== -1) {
-    setUpperCategoryNo(categories[activeItemId].code);
+    setCategoryNo(categories[activeItemId].code);
   }
 
   return (
